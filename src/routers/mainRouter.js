@@ -4,14 +4,14 @@ const express = require("express");
 const router = express.Router();
 
 // Importamos el controlador de las rutas por defecto
-const mainController = require("../controllers/mainController.js")
+const mainController = require("../controllers/mainController")
 
 // En vez de app.get, utilizamos router.get. Esto va "guardando" en router las distintas rutas, que luego exportamos
 
 // Procesa el pedido get con ruta /
 router.get("/", mainController.index);
 /*  res.sendFile(path.resolve(__dirname, "../views/index.html")) */
-router.get("/bibloteca", mainController.bibloteca);
+router.get("/biblioteca", mainController.biblioteca);
 
 router.get("/listaDeDeseos", mainController.listaDeDeseos);
 

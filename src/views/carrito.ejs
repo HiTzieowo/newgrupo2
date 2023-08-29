@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HEAD -->
+    <%- include("partials/head") %>
+    <!-- link para cargar los css  -->
+    <link rel="stylesheet" href="/css/carrito.css">
+</head>
+
+<body>
+    <!--    HEADER  -->
+    <%- include("partials/header") %>
+    
+    <main>
+
+        <div class="carrito">
+            <!-- Primer artículo -->
+            <div class="item" id="articulo-1">
+                <a href="http://localhost:3060/producto">
+                    <img src="/img/gta.png" alt="Producto 1">
+                </a>
+                
+                <a href="http://localhost:3060/producto">
+                    <h3>Grand Theft Auto VI</h3>
+                  </a>
+                <p>$99,98</p>
+                <!-- Botón para eliminar el artículo -->
+                <a href="#articulo-1" class="eliminar">Eliminar</a>
+                <a href="http://localhost:3060/listaDeDeseos" class="mover">Mover a lista de deseos</a>
+            </div>
+
+            <!-- Segundo artículo -->
+            <div class="item2" id="articulo-2">
+                <img src="/img/halo.png" alt="Producto 2">
+                <h3>halo infinite</h3>
+                <p>$150</p>
+                <!-- Botón para eliminar el artículo -->
+                <a href="#articulo-2" class="eliminar">Eliminar</a>
+                <a href="http://localhost:3060/listaDeDeseos" class="mover">Mover a lista de deseos</a>
+            </div>
+
+
+            <!-- Total del carrito -->
+            <div class="total">
+                <h3>Total</h3>
+                <p id="totalPrecio">$249,98</p>
+            </div>
+
+
+                
+        </div>
+        
+
+
+
+
+    </main>
+              <!-- Botón con la imagen -->
+              <a href="https://chat.whatsapp.com/Bg7AfwgEvoiFvSxENXjvJT" class="boton-imagen">
+                <img src="/img/whasapp.png" alt="Botón con Imagen">
+            </a>
+        
+</body>
+
+</html>

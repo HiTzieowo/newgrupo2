@@ -1,7 +1,7 @@
 // Requerir los paquetes que vamos a utilizar
 const express = require("express");
+const path = require("path")
 const app = express();
-
 
 
 
@@ -16,7 +16,13 @@ const app = express();
    
 
     // Usando recursos estáticos.
-    app.use(express.static("public"));
+    app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.urlencoded({extended: false})); // Para poder interpretar lo que llega desde el body
+app.use(express.json());  // Para poder interpretar lo que llega desde el body
+
+//      Template Engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"))
 
 // Usando los enrutadores importados
 app.use("/", mainRouter);

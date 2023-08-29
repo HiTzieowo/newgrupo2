@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 // Importamos el controlador de las rutas por defecto
-const productsController = require("../controllers/productsController.js")
+const productsController = require("../controllers/productsController")
 
 // En vez de app.get, utilizamos router.get. Esto va "guardando" en router las distintas rutas, que luego exportamos
 
