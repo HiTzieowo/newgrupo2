@@ -12,13 +12,19 @@
   <%- include("partials/header") %>
   
   <main>
-    <form action="upload.php" method="get" enctype="multipart/form-data">
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
         <H1>Edicion del producto</H1>
         <input class="formulario" type="text" name="name" placeholder="Nombre del producto">
         <input class="formulario"type="text" name="description" placeholder="Descripción del producto">
         <input class="formulario"type="text" name="history" placeholder="Historia del juego">
         <input class="formulario"type="file" name="image[]" multiple max="5">
-        <input class="formulario"type="text" name="category" placeholder="Categoría del producto">
+        <select class="formulario"type="text" name="category" placeholder="Categoría del producto">
+          <option value="">Elegir Categoría</option>
+          <option value="">Cooperativos</option>
+          <option value="">Terror</option>
+          <option value="">Casuales</option>
+          <option value="">Multijugador</option>
+          <option value="">MMO</option>
         <input class="formulario"type="number" name="price" placeholder="Precio del producto">
         <input class="enviar"type="submit" value="Actualizar Producto">
       </form>
