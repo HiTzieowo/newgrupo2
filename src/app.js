@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path")
 const app = express();
 
-
+const methodOverride = require('method-override')
 
 
 
@@ -31,7 +31,7 @@ app.use("/", productsController);
 
 app.use("/", usuariosController);
 
-
+app.use(methodOverride('_method'))
 
 // Ponemos a escuchar el servidor
 app.listen(3060, () => {
