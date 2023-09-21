@@ -2,17 +2,19 @@
 const fs= require("fs")
 const path = require("path");
 
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+
 // Creamos el objeto literal con los métodos a exportar
 const mainController = {
 
     // Manejo del pedido get con ruta
     index: (req, res) => {
-        // comunicarse con el modelo, conseguir información
-        res.render("inicio")
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("inicio", {products: products});
     },
     biblioteca: (req, res) => {
-        // comunicarse con el modelo, conseguir información
-        res.render("biblioteca")
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("biblioteca", {products: products});
     },
     listaDeDeseos: (req, res) => {
         // comunicarse con el modelo, conseguir información

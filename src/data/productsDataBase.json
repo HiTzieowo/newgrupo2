@@ -1,9 +1,28 @@
-{
-  "id": 1,
+[
+  {
+  "id": 0,
   "name": "The last of us",
-  "price": 100,
+  "price": 1000,
   "discount": 50,
   "category": "visited",
   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-  "image": "img-cafetera-moulinex.jpg"
+  "image": "juego10.png"
+ },
+ {
+  "id": 1,
+  "name": "Assasins Creed",
+  "price": 2000,
+  "discount": 0,
+  "category": "visited",
+  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+  "image": "juego01.png"
+ },{
+  "id": 2,
+  "name": "The Witcher",
+  "price": 1300,
+  "discount": 50,
+  "category": "visited",
+  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+  "image": "juego02.png"
  }
+]

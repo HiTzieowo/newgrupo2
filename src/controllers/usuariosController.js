@@ -14,11 +14,6 @@ const usuariosController = {
         // comunicarse con el modelo, conseguir información
         res.render("register")
     },
-    edit: function(req, res) {
-        let idUser = req.params.idUser;
-
-        res.send(idUser)
-    }
 }
 
 // Exportamos el objeto literal con los distintos métodos, que se usará en el enrutador por defecto

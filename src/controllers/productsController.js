@@ -7,10 +7,19 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 // Creamos el objeto literal con los métodos a exportar
 const productsController = {
 
+    index: (req, res) => {
+		// Do the magic
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		res.render("biblioteca", {products: products});
+	},
+
     // Manejo del pedido get con ruta
     productoDetalle: (req, res) => {
-        // comunicarse con el modelo, conseguir información
-        res.render("producto")
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const product = products.find(product => {
+            return product.id == req.params.id
+        });
+        res.render("producto", {product})
     },
     productocarga: (req, res) => {
         // comunicarse con el modelo, conseguir información

@@ -255,6 +255,12 @@ body {
     font-size: 40px; /* Ajusta el tamaño de la fuente según tus necesidades */
     color: #fff;
   }
+
+  .descuento{
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    color: #fff;
+    padding-left: 10px;
+  }
   
   
   
