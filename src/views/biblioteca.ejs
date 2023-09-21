@@ -16,15 +16,16 @@
     <main>
         <!-- Contenedor de los productos -->
         <div class="contenedor-productos">
-
+            <% products.forEach(product => { %>
             <!-- Productos01 -->
-            <article class="producto">
+                <article class="producto">
+              
                 <div class="contenido-producto">
                     <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego01.png" alt="Imagen de MacBook">
+                        <img src="/img/<%= product.image %>" alt="Imagen de MacBook">
                     </div>
                     <div class="descripcion-producto">
-                        <h2 class="titulo">Assassons Creed</h2>
+                        <h2 class="titulo"><%= product.name %></h2>
                         <div class="contenedor-flex">
 
                             <div class="icono-descarga">
@@ -33,223 +34,12 @@
                             <p class="precio">instalar</p>
                         </div>
 
-
-
-
                     </div>
                 </div>
-            </article>
+                </article>
 
-            <!-- Productos02 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego02.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">The Witcher 3</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Productos03 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego03.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Boederlands 3</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos04 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego04.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Streets of Rage 4</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos05 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego05.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Cyber Punk 2077</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos06 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego06.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Bioshock Infinite</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos07 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego07.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Portal</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos08 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego08.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">God of War</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Productos09 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego09.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Half-Life 2</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos10 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego10.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">The Last of US parte I</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos11 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego11.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Junp Force</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Productos12 -->
-            <article class="producto">
-                <div class="contenido-producto">
-                    <div class="imagenes-ultimas-visitas">
-                        <img src="/img/juego12.png" alt="Imagen de MacBook">
-                    </div>
-                    <div class="descripcion-producto">
-                        <h2 class="titulo">Call of Duty 2</h2>
-                        <div class="contenedor-flex">
-
-                            <div class="icono-descarga">
-                                <i class="fa-solid fa-download"></i>
-                            </div>
-                            <p class="precio">instalar</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
+            <% }); %>
         </div>
-
-
-
-
 
     </main>
     <!-- Botón con la imagen -->
