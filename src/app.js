@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path")
 const app = express();
 
+const bcrypt = require('bcryptjs')
+
     // Importamos los distintos enrutadores
     const mainRouter = require("./routers/mainRouter.js")
 
