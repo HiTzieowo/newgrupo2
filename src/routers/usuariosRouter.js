@@ -13,7 +13,7 @@ const usuariosController = require("../controllers/usuariosController.js")
 
 router.get("/inicioDeSesion",  usuariosController.inicioDeSesion);
 
-router.get("/registro",  usuariosController.registro);
+router.post("/registro",  usuariosController.registro);
 
 // Exportamos la variable router ya con todas las rutas "guardadas", que se usará en app.js
 module.exports = router;
