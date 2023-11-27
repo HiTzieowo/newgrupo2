@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-navbar {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -10px;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  background-color: black;
+  z-index: 5;
+}
+
+input {
+  font-size: 17px;
+  font-family: 'Bauhaus 93', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/background-page.jpg');
+  /* Ruta de la imagen de fondo */
+  background-size: cover;
+  /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center;
+  /* Centra la imagen de fondo */
+}
+
+.logo {
+  width: 110px;
+  margin: 10px;
+}
+
+.usuario li {
+  list-style: none;
+
+}
+
+.usuario {
+  display: none;
+
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu-opciones {
+  display: none;
+  width: 100%;
+  margin-bottom: -5px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  text-align: right;
+  align-items: center;
+}
+
+.search-navbar {
+
+  display: block;
+}
+
+.btn-icon i {
+  color: #ff0000;
+  /* Cambia el color del icono si lo deseas */
+  /* Ajusta el tamaño del icono según tus necesidades */
+  /* font-size: 30px; */
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2;
+}
+
+.btn-logo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-logo a img{
+  width: 90px;
+  height: 110px;
+  margin-top: -75px;
+  margin-bottom: -65px;
+  border-radius: 40px;
+}
+
+/*--------------------------------- Estilos para tablet -----------------------------------------------*/
+@media (min-width: 680px) {
+
+  .usuario,
+  .menu-opciones {
+    display: flex;
+  }
+
+  .search-box {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .usuario a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.065rem;
+    font-size: 20px;
+    font-family: 'Bauhaus 93', sans-serif;
+    display: inline-block;
+    padding: 10px 0px;
+    padding-right: 10px;
+  }
+
+  .menu a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Bauhaus 93', sans-serif;
+
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 265px;
+  }
+
+  button {
+    font-size: 24px;
+  }
+
+  .btn-logo img {
+    width: 15%;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+  }
+
+  .logo{
+    width: 150px;
+  }
+}
+
+@media (min-width: 780px) {
+  input[type="text"] {
+    width: 350px;
+    height: 40px;
+  }
+
+  .menu a {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 870px) {
+  input[type="text"] {
+    width: 430px;
+    height: 45px;
+  }
+
+  .top-navbar, .menu {
+    max-width: 1300px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  input[type="text"] {
+    width: 500px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  input[type="text"] {
+    width: 560px;
+  }
+
+  .menu li{
+    margin-top: -5px;
+  }
+}
+
+/* Estilos para pantallas de PC */
+@media (min-width: 1200px) {
+  .search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+
+  input[type="text"] {
+    font-size: 25px;
+  }
+
+  button {
+    font-size: 30px;
+  }
+
+
+}

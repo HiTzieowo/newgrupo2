@@ -1,0 +1,37 @@
+.user {
+  margin-top: 190px;
+}
+
+.user img {
+  width: 300px;
+  display: flex;
+  margin: auto;
+}
+
+.detalle-user {
+  
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 25px;
+  color: white;
+}
+
+.detalle-user p{
+  margin: 10px;
+}
+
+.btn-logout button{
+  color: red;
+}
+
+@media (min-width: 680px) {
+  .user {
+    margin: 225px 30px 70px;
+    display: flex;
+  }
+
+  .user-image {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/background-page.jpg'); /* Ruta de la imagen de fondo */
+      background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+      background-position: center; /* Centra la imagen de fondo */
+  }
+
+.logo01 img {
+    width: 100%; /* La imagen ocupa todo el ancho del div */
+    height: auto; /* La altura se ajusta automáticamente para mantener las proporciones */
+    max-width: 300px; /* Tamaño máximo para pantallas de PC */
+    display: block; /* Esto es importante para que el ancho máximo funcione correctamente */
+    margin-left: 20px;
+    margin-top: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+.search-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .search-box {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    input[type="text"] {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      font-size: 24px;
+    }
+    .usuario{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .btn-logo img {
+      width: 15%; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .search-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    .search-box {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    input[type="text"] {
+      font-size: 25px;
+    }
+    
+    button {
+      font-size: 30px;
+    }
+    
+    .usuario {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .usuario img {
+      max-width: 90px; /* Tamaño máximo para pantallas de PC */
+    }
+    }
+
+ /* Estilos para el menú */
+ .menu {
+  font-family: 'Bauhaus 93', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 3rem;
+  }
+  
+  .menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  }
+  
+  .menu li {
+  margin: 0 1.5rem;
+  }
+  
+  .menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.625rem;
+  font-size: 2rem;
+  }
+  
+  .menu li a:hover {
+  background-color: #4507ff;
+  }

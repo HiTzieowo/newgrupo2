@@ -4,122 +4,144 @@
 <head>
   <!-- HEAD -->
   <%- include("partials/head") %>
-  <!-- link para cargar los css  -->
-  <link rel="stylesheet" href="/css/producto.css">
+    <!-- link para cargar los css  -->
+    <link rel="stylesheet" href="/css/producto.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <title> Producto </title>
 </head>
 
 <body>
-    <!--    HEADER  -->
-    <%- include("partials/header") %>
-    
+  <!--    HEADER  -->
+  <%- include("partials/header") %>
+
     <main>
-        
+      <div class="detalle-juego">
         <div class="titulo-del-juego">
-            <h2 class="cambiar-tamano"> <%= product.name %></h2>
-            <h2 class="precio-juego-movil"> <%= product.price %></h2>
+          <h2>
+            <%= product.name %>
+          </h2>
         </div>
 
-        <div class="precio-juego-movil">
-           
-        </div>
-    
+
         <!-- carucel de fotos   -->
- <div class="carrusel-todo">
-    <div class="carrusel">
-     <ul class="carrusel-fotos">
-       <li id="foto1"><img src="/img/<%= product.image %>" alt=""></li>
-       <li id="foto2"><img src="/img/<%= product.image %>" alt=""></li>
-       <li id="foto3"><img src="/img/<%= product.image %>" alt=""></li>
-       <li id="foto4"><img src="/img/<%= product.image %>" alt=""></li>
-       <li id="foto5"><img src="/img/<%= product.image %>" alt=""></li>
-       
-     </ul>
-   </div>
-   
-   <ul class="carrusel-menu">
-     <li><a href="#foto1"><img src="/img/<%= product.image %>" alt=""></a></li>
-     <li><a href="#foto2"><img src="/img/<%= product.image %>" alt=""></a></li>
-     <li><a href="#foto3"><img src="/img/<%= product.image %>" alt=""></a></li>
-     <li><a href="#foto4"><img src="/img/<%= product.image %>" alt=""></a></li>
-     <li><a href="#foto5"><img src="/img/<%= product.image %>" alt=""></a></li>
-     
-   </ul>
-   
-   </div>
-       <!-- fin de carucel   -->
 
-       <div class="precio-juego">
-        <h2 class="precio-juego-pc"> $<%= product.price %></h2>
-    </div>
+        <div class="carrusel-todo">
+          <div class="carrusel">
+            <ul class="carrusel-fotos">
+              <li class="" id="foto1"><img src="/img/productos/<%= product.image %>" alt=""></li>
+              <li id="foto2"><img src="/img/productos/<%= product.image %>" alt=""></li>
+              <li id="foto3"><img src="/img/productos/<%= product.image %>" alt=""></li>
+              <li id="foto4"><img src="/img/productos/<%= product.image %>" alt=""></li>
+              <li id="foto5"><img src="/img/productos/<%= product.image %>" alt=""></li>
+
+            </ul>
+          </div>
+
+          <ul class="carrusel-menu">
+            <li><a href="#foto1"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+            <li><a href="#foto2"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+            <li><a href="#foto3"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+            <li><a href="#foto4"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+            <li><a href="#foto5"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+
+          </ul>
+
+          <div class="botones-container">
+            <div class="precio-comprar">
+              <div class="precio">
+                <h2>
+                  $ <%= product.price %>
+                </h2>
+              </div>
+              <a href="http://localhost:3060/carrito" class="btn btn-an cmpr">COMPRAR AHORA</a>
+
+            </div>
+
+            <div class="favorito-carrito">
+              <a href="http://localhost:3060/carrito" class="btn btn-an agr">AGREGAR AL CARRITO</a>
+              <a href="http://localhost:3060/listaDeDeseos" class="btn btn-an ld">A LA LISTA DE DESEOS</a>
+            </div>
+            <div class="editar-eliminar">
+              <a href="/editar/<%= product.id %>" class="btn btn-an ed">Editar</a>
+              <form action="/eliminar/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-an">Eliminar</button>
+                <!-- <a href="/biblioteca" class="btn btn-5">Eliminar juego</a> -->
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <!-- fin de carucel   -->
 
 
 
-       <!-- inicio de botones    -->
+        <!-- inicio de botones    -->
 
-
-    <style>
-        .btn {
+        <!--  <style>
+          .btn {
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-  
-        .btn-1 {
+          }
+
+           .btn-1 {
             color: #ffffff;
             font-family: 'Bauhaus 93', sans-serif;
-            
-        }
-  
-        .btn-2 {
-          color: #ffffff;
+
+          }
+
+          .btn-2 {
+            color: #ffffff;
             font-family: 'Bauhaus 93', sans-serif;
-          
-        }
-  
-        .btn-3 {
-          color: #ffffff;
+
+          }
+
+          .btn-3 {
+            color: #ffffff;
             font-family: 'Bauhaus 93', sans-serif;
-          
-        }
-    </style>
-    
-      <div class="contenedor">
-        <a href="http://localhost:3060/carrito" class="btn btn-1">COMPRAR AHORA</a>
-        <a href="http://localhost:3060/carrito" class="btn btn-2">AGREGAR AL CARRITO</a>
-        <a href="http://localhost:3060/listaDeDeseos" class="btn btn-3">A LA LISTA DE DESEOS</a>
+
+          }
+
+          .btn-4 {
+            color: #ffffff;
+            font-family: 'Bauhaus 93', sans-serif;
+
+          }
+
+          .btn-5 {
+            color: #ffffff;
+            font-family: 'Bauhaus 93', sans-serif;
+          } 
+        </style>
+ -->
+
+
+
+        <!-- fin de botones    -->
+
       </div>
-    </div>
-  
-    <!-- fin de botones    -->
 
+      <div class="descripcion-juego">
+        <h1 class="titulo-juego">
+          <%= product.name %>
+        </h1>
 
-    <div class="descripcion-juego">
-        <h1 class="titulo-juego"> <%= product.name %></h1>
-    
         <div class="caracteristicas">
           <h2 class="subtitulo">Características del Juego:</h2>
           <ul>
             <%= product.description %>
           </ul>
         </div>
-    
+
         <div class="historia">
           <h2 class="subtitulo">Historia:</h2>
-          <p>En el mundo de <strong>Grand Theft Auto VI</strong>, te encuentras en una ciudad ficticia sumida en el caos y la
-            corrupción. Como un joven ambicioso recién llegado a la ciudad, te involucras en el bajo mundo criminal para
-            ascender desde las calles hasta las altas esferas del crimen organizado.</p>
-          <p>A medida que avanzas, te verás envuelto en una intrincada red de conspiraciones, traiciones y alianzas
-            cambiantes. Tendrás que tomar decisiones difíciles que determinarán tu destino y el curso del juego.</p>
+          <p>
+            <%= product.history %>
+          </p>
         </div>
-    
-        <div class="preparado">
-          <h3 class="subtitulo-preparado">¡Prepárate para la aventura más emocionante en la historia de Grand Theft Auto! El
-            poder y la riqueza están al alcance de tu mano, pero también lo están la traición y el peligro. ¿Estás listo para
-            dominar las calles y forjar tu imperio criminal? La ciudad te espera en <strong>Grand Theft Auto VI</strong>.</h3>
-        </div>
+
       </div>
 
-  
     </main>
 </body>
 

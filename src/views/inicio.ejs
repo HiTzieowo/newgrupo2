@@ -2,104 +2,75 @@
 <html lang="en">
 
 <!-- Include Head -->
+
 <head>
-    <!-- HEAD -->
-    <%- include("partials/head") %>
+  <!-- HEAD -->
+  <%- include("partials/head") %>
     <!-- link para cargar los css  -->
+    <!-- <link rel="stylesheet" href="/css/partials/header.css"> -->
     <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <title>炎ATLAS炎</title>
 </head>
 
 <body>
-    <!--    HEADER  -->
-    <%- include("partials/header") %>
+  <!--    HEADER  -->
+  <%- include("partials/header") %>
 
     <main>
-         <!-- inicio de carrcel -->
-        <div class="carousel-wrapper">
-            <span id="item-1"></span>
-            <span id="item-2"></span>
-            <span id="item-3"></span>
-            <span id="item-4"></span>
-            <span id="item-5"></span>
-            <span id="item-6"></span>
-            
-            <div class="carousel-item item-1">
-              <a href="#item-6" class="arrow-prev arrow"></a>
-              <a href="#item-2" class="arrow-next arrow"></a>
-            </div>
-          
-            <div class="carousel-item item-2">
-              <a href="#item-1" class="arrow-prev arrow"></a>
-              <a href="#item-3" class="arrow-next arrow"></a>
-            </div>
-          
-            <div class="carousel-item item-3">
-              <a href="#item-2" class="arrow-prev arrow"></a>
-              <a href="#item-4" class="arrow-next arrow"></a>
-            </div>
-          
-            <div class="carousel-item item-4">
-              <a href="#item-3" class="arrow-prev arrow"></a>
-              <a href="#item-5" class="arrow-next arrow"></a>
-            </div>
-          
-            <div class="carousel-item item-5">
-              <a href="#item-4" class="arrow-prev arrow"></a>
-              <a href="#item-6" class="arrow-next arrow"></a>
-            </div>
-          
-            <div class="carousel-item item-6">
-              <a href="#item-5" class="arrow-prev arrow"></a>
-              <a href="#item-1" class="arrow-next arrow"></a>
-            </div>
-          </div>
-          <!-- fin de carrcel -->
+      <!-- inicio de carrcel -->
+      <div class="carousel-wrapper">
+        <div class="contenedor-carrusel">
+          <img src="/img/carucel02.png" alt="Imagen">
+        </div>
+      </div>
+      <!-- fin de carrcel -->
 
-            <!-- Contenedor de los productos -->
-            <div class="contenedor-productos">
-                <% products.forEach(product => { %>
+      <!-- Contenedor de los productos -->
+      <div class="contenedor-articulo">
+        <% products.forEach(product=> { %>
+          <article class="producto">
 
-                <!-- Productos01 -->
-                <article class="producto">
-                    
-                        
-                        <div class="contenido-producto">
-                          <a href="/producto/<%= product.id %>">
-                            <div class="imagenes-ultimas-visitas">
-                              <img src="/img/<%= product.image %>" alt="">
-                            </div>
-                            <div class="descripcion-producto">
-                                <h2 class="titulo"> <%= product.name %> </h2>
-                                <div class="contenedor-flex">
-    
-                                    <div class="icono-descarga">
-                                       <i class="fa-solid fa-gamepad" style="color: #ff0088;"></i>
-                                    </div>
-                                    <p class="precio"><%= product.price %></p>
-                                    <p class="descuento"> <%= product.discount %></p>
-                                </div>
-                            </div>
-                          </a>
-                        </div>
-                    
-                </article>
-                
-                <% }); %>
+            <div class="contenedor-producto">
+              <a href="/producto/<%= product.id %>">
+                <img src="/img/productos/<%= product.image %>" alt="">
+              </a>
+              <div class="detalles">
+                <div class="nombre">
+                  <a href="/producto/<%= product.id %>">
+                    <p>
+                      <%= product.name %>
+                    </p>
+                  </a>
+                </div>
+                <div class="precio">
+                  <p> $ <%= product.price %>
+                  </p>
+                </div>
+              </div>
             </div>
+          </article>
+          <% }) %>
 
-            <!-- Botón con la imagen -->
-    <a href="https://chat.whatsapp.com/Bg7AfwgEvoiFvSxENXjvJT" class="boton-imagen">
+      </div>
+      <!-- Productos01 -->
+
+
+      <!-- Botón con la imagen -->
+      <!-- <a href="https://chat.whatsapp.com/Bg7AfwgEvoiFvSxENXjvJT" class="boton-imagen">
         <img src="/img/whasapp.png" alt="Botón con Imagen">
     </a>
-
+ -->
 
 
     </main>
-   
-    <!--SE INCLUYE FOOTER-->
 
-    <%- include('./partials/footer.ejs') %>
- 
+    <!--SE INCLUYE FOOTER-->
+    <footer>
+      <%- include("partials/footer") %>
+    </footer>
+
+
 
 </body>
 

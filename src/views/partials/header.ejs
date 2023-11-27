@@ -1,39 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+
+</html>
 <header>
-    <a href="/">
-        <div class="logo01">
-            <img src="/img/logo-tienda.png" alt="logo-tienda">
-        </div>
-    </a>
-
-    <!-- barra de búsquedas -->
-    <div class="search-container">
-        <input type="text" placeholder="buscar juegos" style="font-size: 25px;"
-            style="font-family: 'Bauhaus 93', sans-serif;">
-        <button class="btn-icon">
-            <i class="fa-solid fa-magnifying-glass" style="font-size: 30px;"></i>
-        </button>
-
-        <div class="usuario">
-            <a href="inicioDeSesion">
-                <button class="btn-logo">
-                    <img src="/img/logo-usuario.png" alt="logo-usuario">
-                </button>
+    <div class="header">
+        <div class="top-navbar">
+            <a href="/">
+                <img class="logo" src="/img/logo-tienda.png" alt="logo-tienda">
             </a>
+
+            <!-- barra de búsquedas -->
+            <div class="search-container">
+                <div class="search-navbar">
+                    <input type="text" placeholder="Buscar juegos">
+                    <button class="btn-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="usuario">
+                    <ul>
+                        <% if (locals.isLogged) { %>
+                            <li class="btn-logo">
+                                <a href="/user">
+                                    <img src="/img/imagenes-usuarios/<%= locals.userLogged.imgPerfil %>"
+                                        alt="logo-usuario">
+                                </a>
+
+                                </p>
+                            </li>
+
+                            <% } else { %>
+                                <li><a href="/inicioDeSesion">Login</a></li>
+                                <li><a href="/register">¡Registrate!</a></li>
+
+                                <% } %>
+                    </ul>
+
+
+                </div>
+            </div>
         </div>
+
+        <!-- menu de opciones -->
+
+        <nav class="menu">
+            <ul class="menu-opciones">
+                <li><a href="/">INICIO</a></li>
+                <li><a href="/biblioteca">BIBLIOTECA</a></li>
+                <li><a href="/listaDeDeseos">LISTA DE DESEOS</a></li>
+                <li><a href="/carrito">CARRITO</a></li>
+                <li><a href="/crear">AGREGAR UN PRODUCTO</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <!-- menu de opciones -->
-
-    <nav class="menu">
-        <ul class="menu-opciones">
-            <li><a href="/">INICIO</a></li>
-            <li><a href="biblioteca">BIBLIOTECA</a></li>
-            <li><a href="listaDeDeseos">LISTA DE DESEOS</a></li>
-            <li><a href="carrito">CARRITO</a></li>
-            <li><a href="edicionDeProducto">AGREGAR UN PRODUCTO</a></li>
-        </ul>
-    </nav>
-
 
 
 </header>

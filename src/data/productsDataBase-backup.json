@@ -1,0 +1,90 @@
+[
+  {
+   "id": 0,
+   "name": "The last of us",
+   "price": 50002,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+   "image": "product-1700157400795.png"
+  },
+  {
+   "id": 2,
+   "name": "The Witcher 3",
+   "price": 1300,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+   "image": "juego02.png"
+  },
+  {
+   "id": 3,
+   "name": "Borderlands 3",
+   "price": 6900,
+   "discount": 50,
+   "category": "visited",
+   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+   "image": "juego03.png"
+  },
+  {
+   "id": 4,
+   "name": "Streets of Rage 4",
+   "price": 6300,
+   "discount": 50,
+   "category": "visited",
+   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+   "image": "juego04.png"
+  },
+  {
+   "id": 5,
+   "name": "Mortal Kombat 1",
+   "price": null,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "",
+   "image": "product-1700156803306.png"
+  },
+  {
+   "id": 6,
+   "name": "Halo Infinite",
+   "price": 25235,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "",
+   "image": "product-1700157547683.png"
+  },
+  {
+   "id": 7,
+   "name": "Call of Duty 2",
+   "price": null,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "",
+   "image": "product-1700160042027.png"
+  },
+  {
+   "id": 8,
+   "name": "Borderlands 3",
+   "price": null,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "",
+   "image": "product-1700251150130.png"
+  },
+  {
+   "id": 9,
+   "name": "Cyberpunk2077",
+   "price": 12313,
+   "discount": null,
+   "category": "",
+   "history": "",
+   "description": "",
+   "image": "product-1700251223156.png"
+  }
+ ]

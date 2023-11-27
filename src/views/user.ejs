@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/users.css">
+        <title>Usuario</title>
+</head>
+
+<body>
+    <header>
+        <%- include("partials/header") %>
+    </header>
+
+    <main>
+        <div class="user">
+            <div class="user-image">
+                <img src="/img/imagenes-usuarios/<%= user.imgPerfil %>" alt="">
+            </div>
+
+            <div class="detalle-user">
+                <p>Nombre de Usuario <%= user.nombre + ' ' + user.apellido%>
+                </p>
+                <div class="btn-logout">
+                    <form action="/logOut" method="GET">
+                        <button>Cerrar Sesión</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include("partials/footer") %>
+
+    </footer>
+</body>
+
+</html>

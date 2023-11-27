@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HEAD -->
+    <%- include("partials/head") %>
+    <!-- link para cargar los css  -->
+    <link rel="stylesheet" href="/css/cargaDeProducto.css">
+</head>
+<body>
+  <!--    HEADER  -->
+  <%- include("partials/header") %>
+  
+  <main>
+    <form action="/editar/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <H1>Edicion del producto</H1>
+        <input value="<%= productToEdit.name %>" class="formulario" type="text" name="name" placeholder="Nombre del producto">
+        <input value="<%= productToEdit.description %>" class="formulario"type="text" name="description" placeholder="Descripción del producto">
+        <input value="<%= productToEdit.history %>" class="formulario"type="text" name="history" placeholder="Historia del juego">
+        <input type="file" id="image" name="image">
+        <select class="formulario"type="text" name="category" placeholder="Categoría del producto">
+          <option value="">Elegir Categoría</option>
+          <option value="">Cooperativos</option>
+          <option value="">Terror</option>
+          <option value="">Casuales</option>
+          <option value="">Multijugador</option>
+          <option value="">MMO</option>
+          <option value="">Otro</option>
+        <input value="<%= productToEdit.price %>" class="formulario"type="number" name="price" placeholder="Precio del producto">
+        <input class="enviar"type="submit" value="Actualizar Producto">
+      </form>
+      
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 My E-Commerce Website</p>
+  </footer>
+</body>
+</html>

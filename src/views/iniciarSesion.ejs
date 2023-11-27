@@ -4,45 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="/css/iniciarSesion.css">
-    <title>炎ATLAS炎</title>
+    <title>炎Iniciar Sesión炎</title>
     <link rel="shortcut icon" href="/img/logo-tienda.png">
 </head>
 
 <body>
     <main>
         <header>
-            <img class="logo" src="img/logo-tienda.png" alt="Logo">
-            <h1>Nombre Pagina</h1>
+            <a href="/">
+                <img class="logo" src="img/logo-tienda.png" alt="Logo">
+                <h1>Vienvenido a 炎 Atlas 炎</h1>
+            </a>
         </header>
 
-        <form class="login" action="biblioteca" method="get">
-            <h2>E-mail</h2>
-            <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email" required>
-            <h2>Contraseña</h2>
-            <input class="password" type="password" name="password" id="password" placeholder="Ingrese su contraseña"
-                required>
-            <div class="caja1">
-                <div class="recordar">
-                    <label for="recordar">recordar</label>
-                    <input type="checkbox" name="recordar" id="recordar">
-                </div>
-                <a href="/recuperarContraseña">Olvidé mi contraseña</a>
+        <form  action="/inicioDeSesion" method="POST">
+            <div>
+                <h2>E-mail</h2>
+                <input class="email" type="email" name="correo" id="correo" placeholder="Ingrese su email" >
+                    <% if (locals.errors && errors.correo) { %>
+                        <div class="text-danger">
+                            <%= errors.correo.msg %>
+                        </div>
+                    <% } %>
+                        <h2>Contraseña</h2>
+                        <input class="password" type="password" name="contrasena" id="contrasena"
+                            placeholder="Ingrese su contraseña">
+                        <div class="caja1">
+                            <div class="recordar">
+                                <label for="recordar">recordar</label>
+                                <input type="checkbox" name="recordar">
+                            </div>
+                            <a href="/recuperarContraseña">Olvidé mi contraseña</a>
+                        </div>
+                        <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
             </div>
-            <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
-        </form>
-        <form class="redes" action="/login" method="post">
-            <img class="icon" src="img/facebook-icon.png" alt="facebook">
-            <button class="facebook" type="button">Continuar con facebook</button>
-            <img class="icon" src="img/gmail-icon.png" alt="gmail">
-            <button class="gmail" type="button">Continuar con gmail</button>
+
+            <div>
+
+                <img class="icon" src="img/facebook-icon.png" alt="facebook">
+                <button class="facebook" type="button">Continuar con facebook</button>
+                <img class="icon" src="img/gmail-icon.png" alt="gmail">
+                <button class="gmail" type="submit">Continuar con gmail</button>
+            </div>
         </form>
 
 
         <footer>
             <span>¿No tienes una cuenta? →</span>
-            <a href="http://localhost:3060/registro">Registrate</a>
+            <a href="/register">Registrate</a>
 
         </footer>
     </main>

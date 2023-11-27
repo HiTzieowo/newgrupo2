@@ -6,63 +6,90 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/register.css">
-  <title>炎ATLAS炎</title>
+  <title>炎Registro炎</title>
   <link rel="shortcut icon" href="/img/logo-tienda.png">
-  
+
   <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <img class="img" src="\img\logo-tienda.png" alt="">
+  <a href="/"><img class="img" src="\img\logo-tienda.png" alt=""></a>
   <h1>Registrarse</h1>
-  <form action="" method="POST">
-    <span>
-      <label class="texto">Nombre:</label>
-      <input type="text">
-    </span>
-    <span>
-      <label class="texto">Apellidos</label>
-      <input type="text" placeholder="">
-    </span>
-    <p>
-      <label class="texto" for="email">Correo electrico</label>
-      <input type="email" placeholder="example@gmail.com">
-    </p>
-    <p>
-      <label class="texto">Crear contraseña</label>
-      <input type="password" placeholder="">
-    </p>
-    <p>
-      <label class="texto">Repita la contraseña</label>
-      <input type="password" placeholder="">
-    </p>
-    <p><input class="texto" type="checkbox"> Acepto los <a
-        href="https://store.steampowered.com/subscriber_agreement/spanish/">terminos y condiciones</a></p>
+
+  <form action="/register" method="POST" enctype="multipart/form-data">
+    <label class="texto">Nombre:</label>
+    <input 
+      type="text" 
+      id="nombre" 
+      name="nombre" 
+      class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+      value="<%= locals.oldData ? oldData.nombre : null %>">
+
+    <% if (locals.errors && errors.nombre) { %>
+      <div class="text-danger">
+        <%= errors.nombre.msg %>
+      </div>
+      <% } %>
+
+        <label class="texto">Apellidos</label>
+        <input type="text" id="apellido" name="apellido"
+        value="<%= locals.oldData ? oldData.apellido : null %>">
+        <% if (locals.errors && errors.apellido) { %>
+          <div class="text-danger">
+            <%= errors.apellido.msg %>
+          </div>
+
+          <% } %>
+
+           <input type="file" id="imgPerfil" name="imgPerfil">
+           <% if (locals.errors && errors.imgPerfil) { %>
+            <div class="text-danger">
+              <%= errors.imgPerfil.msg %>
+            </div>
+
+            <% } %>
+
+            <label class="texto" for="email">Correo electrico</label>
+            <input type="email" id="correo" name="correo" placeholder="example@gmail.com"
+            value="<%= locals.oldData ? oldData.correo : null %>">
+            <% if (locals.errors && errors.correo) { %>
+              <div class="text-danger">
+                <%= errors.correo.msg %>
+              </div>
+
+              <% } %>
+
+                <label class="texto">Crear contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="">
+                <% if (locals.errors && errors.contrasena) { %>
+                  <div class="text-danger">
+                    <%= errors.contrasena.msg %>
+                  </div>
+
+                  <% } %>
+
+                    <!-- <label class="texto">Repita la contraseña</label>
+      <input type="password" placeholder=""> -->
+                    <!-- <input class="texto" type="checkbox"> Acepto los <a
+        href="https://store.steampowered.com/subscriber_agreement/spanish/">terminos y condiciones</a> -->
+                    <input class="enviar" type="submit" value="Crear usuario">
   </form>
   <div>
+
     <a href="https://accounts.google.com/ServiceLogin">
-        <button class="buttonmail" type="submit">
-            <span>Registrarse con gmail</span>
-            <i class="fa-brands fa-google"></i>
-        </button>
+      <button class="buttonmail" type="submit">
+        <span>Registrarse con gmail</span>
+        <i class="fa-brands fa-google"></i>
+      </button>
     </a>
     <a href="https://www.facebook.com/">
-        <button type="submit" class="buttonface">
-            <span>Continua con Facebook</span>
-            <i class="fa-brands fa-facebook"></i>
-        </button>
+      <button type="submit" class="buttonface">
+        <span>Continua con Facebook</span>
+        <i class="fa-brands fa-facebook"></i>
+      </button>
     </a>
-</div>
-
-  <div>
-    <p>
-      <a href="http://localhost:3060/inicioDeSesion">
-
-
-        <button class="contra" type="submit">Crear Cuenta</button>
-      </a>
-    </p>
   </div>
+
 </body>
 
 </html>

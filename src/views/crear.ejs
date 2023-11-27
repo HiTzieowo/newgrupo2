@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- HEAD -->
+    <%- include("partials/head") %>
+    <!-- link para cargar los css  -->
+    <link rel="stylesheet" href="/css/cargaDeProducto.css">
+    <title>炎Agregar Producto炎</title>
+</head>
+
+<body>
+  <!--    HEADER  -->
+  <%- include("partials/header") %>
+  
+  <main>
+    <form action="/crear" method="POST" enctype="multipart/form-data">
+        <H1>Carga de un nuevo producto</H1>
+        <input class="formulario" type="text" id="name" name="name" placeholder="Nombre del producto">
+        <input class="formulario" type="text" id="description" name="description" placeholder="Descripción del producto">
+        <input class="formulario" type="text" id="history" name="history" placeholder="Historia del juego">
+        <div>
+          
+          <input type="file" id="image" name="image">
+        </div>
+        <input class="formulario" type="text" id="category" name="category" placeholder="Categoría del producto">
+        <input class="formulario" type="number" id="price" name="price" placeholder="Precio del producto">
+        <input class="enviar" type="submit" value="Crear Producto">
+      </form>
+      
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 My E-Commerce Website</p>
+  </footer>
+</body>
+</html>
