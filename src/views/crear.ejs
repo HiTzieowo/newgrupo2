@@ -24,7 +24,15 @@
           
           <input type="file" id="image" name="image">
         </div>
-        <input class="formulario" type="text" id="category" name="category" placeholder="Categoría del producto">
+        <select class="formulario"type="text" name="category" placeholder="Categoría del producto">
+          <option value="" disabled selected>Elegir Categoría</option>
+          <option value="">Cooperativos</option>
+          <option value="">Terror</option>
+          <option value="">Casuales</option>
+          <option value="">Multijugador</option>
+          <option value="">MMO</option>
+          <option value="">Otro</option>
+          </select>
         <input class="formulario" type="number" id="price" name="price" placeholder="Precio del producto">
         <input class="enviar" type="submit" value="Crear Producto">
       </form>

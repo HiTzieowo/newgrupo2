@@ -3,7 +3,7 @@ const fs = require("fs")
 const path = require("path");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-const User = require('../models/Users');
+const User = require('../database/models/User');
 const { use } = require("../routers/usuariosRouter");
 
 // Creamos el objeto literal con los métodos a exportar

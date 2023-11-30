@@ -19,13 +19,14 @@
         <input value="<%= productToEdit.history %>" class="formulario"type="text" name="history" placeholder="Historia del juego">
         <input type="file" id="image" name="image">
         <select class="formulario"type="text" name="category" placeholder="Categoría del producto">
-          <option value="">Elegir Categoría</option>
+          <option value="" disabled selected>Elegir Categoría</option>
           <option value="">Cooperativos</option>
           <option value="">Terror</option>
           <option value="">Casuales</option>
           <option value="">Multijugador</option>
           <option value="">MMO</option>
           <option value="">Otro</option>
+          </select>
         <input value="<%= productToEdit.price %>" class="formulario"type="number" name="price" placeholder="Precio del producto">
         <input class="enviar"type="submit" value="Actualizar Producto">
       </form>
