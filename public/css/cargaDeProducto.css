@@ -64,3 +64,7 @@ form {
   p{
     color: #fff;
   }
+
+  input#image {
+    margin-bottom: 10px;
+  }
