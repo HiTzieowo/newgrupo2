@@ -23,7 +23,8 @@
       id="nombre" 
       name="nombre" 
       class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
-      value="<%= locals.oldData ? oldData.nombre : null %>">
+      value="<%= locals.oldData ? oldData.nombre : null %>"
+      placeholder="ingrese su nombre">
 
     <% if (locals.errors && errors.nombre) { %>
       <div class="text-danger">
@@ -33,7 +34,7 @@
 
         <label class="texto">Apellidos</label>
         <input type="text" id="apellido" name="apellido"
-        value="<%= locals.oldData ? oldData.apellido : null %>">
+        value="<%= locals.oldData ? oldData.apellido : null %>" placeholder="ingrese su apellido">
         <% if (locals.errors && errors.apellido) { %>
           <div class="text-danger">
             <%= errors.apellido.msg %>
@@ -60,7 +61,7 @@
               <% } %>
 
                 <label class="texto">Crear contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" placeholder="">
+                <input type="password" id="contrasena" name="contrasena" placeholder="ingrese una contraseña">
                 <% if (locals.errors && errors.contrasena) { %>
                   <div class="text-danger">
                     <%= errors.contrasena.msg %>
@@ -72,7 +73,9 @@
       <input type="password" placeholder=""> -->
                     <!-- <input class="texto" type="checkbox"> Acepto los <a
         href="https://store.steampowered.com/subscriber_agreement/spanish/">terminos y condiciones</a> -->
-                    <input class="enviar" type="submit" value="Crear usuario">
+        
+                   <input class="enviar" type="submit" value="Crear usuario">
+
   </form>
   <div>
 
@@ -89,8 +92,6 @@
       </button>
     </a>
   </div>
-
-  <%- include("partials/footer") %>
 
 </body>
 
