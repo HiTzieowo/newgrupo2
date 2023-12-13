@@ -83,3 +83,7 @@ body {
   form {
     display: block;
   }
+
+  .enviar {
+    margin-top: 10px;
+  }

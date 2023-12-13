@@ -6,5 +6,13 @@
   "correo": "cristian@gmail.com",
   "contrasena": "$2a$10$.9/GmzwCXUaFNUs/NoWRZ.Ch7wQh1aqhDotBjKtmItOFOm/K.oWm.",
   "imgPerfil": "user-1700690207581.png"
+ },
+ {
+  "id": 1,
+  "nombre": "tomas",
+  "apellido": "morales",
+  "correo": "tomasvac02@gmail.com",
+  "contrasena": "$2a$10$DaYqDkfTHlnNhzg1ZTrSt.OrLXnzszZqd1oUiknce/Vf64U5Zn/V.",
+  "imgPerfil": "user-1702496426410.jpg"
  }
 ]
