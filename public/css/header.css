@@ -69,7 +69,7 @@ body {
 }
 
 .search-navbar {
-
+  margin-right: 100px;
   display: block;
 }
 
@@ -233,4 +233,5 @@ body {
 
 .search-navbar input {
   font-family: 'Rethink Sans', sans-serif;
+  border-radius: 20px;
 }
