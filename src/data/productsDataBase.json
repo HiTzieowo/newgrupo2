@@ -79,11 +79,20 @@
  {
   "id": 9,
   "name": "Cyberpunk2077",
-  "price": 12313,
+  "price": 20000,
   "discount": null,
-  "category": "",
   "history": "",
   "description": "",
   "image": "product-1700251223156.png"
+ },
+ {
+  "id": 10,
+  "name": "Dead Space",
+  "price": 2500,
+  "discount": null,
+  "category": "",
+  "history": "Matar monstruos",
+  "description": "Juego de terror y suspenso ambientado en el espacio",
+  "image": "product-1702575293965.jpg"
  }
 ]

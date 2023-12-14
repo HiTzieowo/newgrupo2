@@ -222,3 +222,15 @@ body {
 
 
 }
+
+.menu-opciones li a {
+  font-family: 'Rethink Sans', sans-serif;
+}
+
+.usuario li a {
+  font-family: 'Rethink Sans', sans-serif;
+}
+
+.search-navbar input {
+  font-family: 'Rethink Sans', sans-serif;
+}

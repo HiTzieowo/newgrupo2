@@ -1,6 +1,5 @@
 
 .carousel-wrapper {
-  border: red dotted;
   height: 345px;
   max-width: 100%;
   margin-bottom: 50px;
@@ -8,7 +7,6 @@
 }
 
 .contenedor-carrusel{
-  border: orange dotted;
   width: 95%;
   height: 100%;
   display: flex;

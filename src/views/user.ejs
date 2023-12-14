@@ -20,8 +20,8 @@
             </div>
 
             <div class="detalle-user">
-                <p>Nombre de Usuario <%= user.nombre + ' ' + user.apellido%>
-                </p>
+                <p>Nombre de Usuario: <%= user.nombre + ' ' + user.apellido%></p>
+                <p>Correo electronico: <%= user.correo%></p>
                 <div class="btn-logout">
                     <form action="/logOut" method="GET">
                         <button>Cerrar Sesión</button>

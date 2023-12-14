@@ -59,7 +59,7 @@ form {
   }
   
   h1{
-    font-family: 'Bauhaus 93', sans-serif;
+    font-family: 'Rethink Sans', sans-serif;
   }
   p{
     color: #fff;
@@ -67,4 +67,12 @@ form {
 
   input#image {
     margin-bottom: 10px;
+  }
+
+  body {
+    font-family: 'Rethink Sans', sans-serif;
+  }
+
+  form input {
+    font-family: 'Rethink Sans', sans-serif;
   }
