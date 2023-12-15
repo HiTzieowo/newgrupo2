@@ -234,4 +234,15 @@ body {
 .search-navbar input {
   font-family: 'Rethink Sans', sans-serif;
   border-radius: 20px;
+  padding-left: 15px;
+
+}
+
+.usuario {
+  position: relative; left: 230px
+}
+
+.logo {
+  position: relative;
+  right: 200px;
 }
