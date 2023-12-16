@@ -1,4 +1,6 @@
 *  {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
@@ -73,9 +75,10 @@ body {
   form {
     display: block;
    text-align: center;
-   width: 500px;
+   width: auto;
    border: 1px solid black;
    justify-content: center;
+   height: auto;
   }
 
   .form-contacto {
@@ -90,4 +93,8 @@ body {
 
   .enviar {
     margin-top: 10px;
+  }
+
+  label {
+    display: inline-block;
   }
