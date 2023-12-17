@@ -82,9 +82,11 @@ body {
   }
 
   .form-contacto {
+    width: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .reg-title {
@@ -97,4 +99,8 @@ body {
 
   label {
     display: inline-block;
+  }
+
+  @media screen {
+    
   }
