@@ -1,3 +1,3 @@
-/* window.addEventListener("load", function() {
-       this.alert(1)
-}) */
+ window.addEventListener("onload", function() {
+       
+}) 

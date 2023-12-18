@@ -79,14 +79,18 @@ body {
    border: 1px solid black;
    justify-content: center;
    height: auto;
+   font-family: 'Rethink Sans', sans-serif;
   }
 
   .form-contacto {
+    background-color: rgb(1, 1, 90);
     width: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    box-shadow: 5px 5px 15px;
+    padding: 30px;
+    border-radius: 10px;
   }
   
   .reg-title {
@@ -101,6 +105,37 @@ body {
     display: inline-block;
   }
 
-  @media screen {
-    
+
+
+  @media screen and (max-width: 767px) {
+    .form-contacto {
+      width: 100vw;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .form-contacto {
+      width: 350px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+    .form-contacto {
+      position: relative;
+      left: 25vw;
+    }
+  }
+ 
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .form-contacto {
+      position: relative;
+      left: 31vw;
+    }
+  }
+
+  @media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .form-contacto {
+      position: relative;
+      left: 36vw;
+    }
   }

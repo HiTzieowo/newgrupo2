@@ -83,3 +83,21 @@
     margin: 5px 10px;;
   }
 }
+
+@media (min-width: 450px) {
+  .search-navbar {
+    align-items: center;
+  }
+}
+
+@media (max-width:320px) {
+  .logo-link {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-link {
+    display: none;
+  }
+}
