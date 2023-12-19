@@ -296,3 +296,7 @@ p{
     height: 100px;
     cursor: pointer;
   }
+
+main {
+  padding-top: 26%;
+}

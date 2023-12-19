@@ -105,3 +105,13 @@
     display: none;
   }
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .usuario {
+    position: absolute;
+    left: 100px;
+  }
+}
+
+main{
+  padding-top: 3%;
+}

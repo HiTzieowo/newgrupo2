@@ -13,13 +13,11 @@
 }
 
 .detalle-juego {
-  margin-top: 140px;
-  /* border: #fff dotted; */
+  margin-top: 120px;
 }
 
 .carrusel-todo {
   width: 90%;
-  border: yellow dotted;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +29,6 @@
   display: flex;
   width: 95%;
   height: 240px;
-  border: #03cc57 dotted;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: space-arround;
@@ -75,7 +72,7 @@ h2 {
 
 .btn-an {
   overflow: hidden;
-  border: 3px solid #000;
+  border: 3px solid ;
   z-index: 1;
 }
 
@@ -396,3 +393,17 @@ body {
     /* Tamaño del subtítulo reducido para dispositivos móviles */
   }
 } 
+
+main {
+  padding-bottom: 10%;
+  padding-top: 22%;
+}
+
+.titulo-del-juego {
+  position: absolute;
+  top: 30%;
+}
+
+.botones-container {
+  border:3px black solid;
+}
