@@ -143,9 +143,13 @@ body {
     display: none;
   }
 
-  .psesion p {
-    text-align: center;
-    align-items: center;
-    position: relative;
-    left: 100px;
+   p {   
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .reg-title {
+    margin-top: 1%;
+    margin-bottom: 1%;
   }
