@@ -47,7 +47,7 @@
 
            <input type="file" id="imgPerfil" name="imgPerfil">
            <% if (locals.errors && errors.imgPerfil) { %>
-            <div class="text-danger">
+            <div class="text-danger" style="color: rgb(246, 13, 98);">
               <%= errors.imgPerfil.msg %>
             </div>
 
@@ -81,8 +81,8 @@
 
   </form>
 
- </div>
-
+ </div class='psesion'>
+      <p>¿Ya tienes una cuenta? <a style="text-decoration: none; color: rgb(255, 145, 0);" href="inicioDeSesion">Inicia sesión aquí</a></p>
   <div>
 
     <a href="https://accounts.google.com/ServiceLogin">

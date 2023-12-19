@@ -239,7 +239,7 @@ body {
 }
 
 .usuario {
-  position: relative; left: 230px
+  position: relative; left: 10%
 }
 
 .logo {
@@ -252,6 +252,11 @@ body {
 }
 
 .usuario a:hover {
-  border-bottom: 1px solid aqua;
+  border-bottom: 1px solid red;
+}
+
+.logo-link, .logo {
+  position: relative;
+  right:auto;
 }
 

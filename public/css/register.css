@@ -5,7 +5,7 @@
 }
 body {
   font-family: 'Rethink Sans', sans-serif;
-  background-color: grey;
+  background-image: url('/img/fondo-login.png');
 }
 
 .container {
@@ -76,7 +76,6 @@ body {
     display: block;
    text-align: center;
    width: auto;
-   border: 1px solid black;
    justify-content: center;
    height: auto;
    font-family: 'Rethink Sans', sans-serif;
@@ -138,4 +137,15 @@ body {
       position: relative;
       left: 36vw;
     }
+  }
+
+  .buttonface, .buttonmail {
+    display: none;
+  }
+
+  .psesion p {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    left: 100px;
   }
