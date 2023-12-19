@@ -13,8 +13,8 @@
 }
 
 .detalle-juego {
-  margin-top: 120px;
-  border: #fff dotted;
+  margin-top: 140px;
+  /* border: #fff dotted; */
 }
 
 .carrusel-todo {
@@ -60,7 +60,7 @@
 
 h2 {
   margin: 0;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 
@@ -116,7 +116,7 @@ h2 {
 }
 
 /* Estilos para el encabezado h2 en dispositivos móviles */
-@media screen and (max-width: 767px) {
+@media (min-width: 680px) {
   .titulo-del-juego {
     text-align: center;
     /* Centra el texto horizontalmente */

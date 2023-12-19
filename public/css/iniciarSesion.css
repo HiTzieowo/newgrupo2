@@ -13,10 +13,13 @@ h2{
     font-size: 18px;
 }
 header {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    text-align: center;
 }
 
+form{
+    text-align: center;
+}
 body {
     background: #0c192c;
     background-image: url('/img/fondo-login.png'); /* Ruta de la imagen de fondo */
@@ -34,7 +37,7 @@ body {
 }
 
 .logo {
-    width: 30vw;
+    width: 25vw;
     
 }
 
@@ -86,6 +89,7 @@ button{
 }
 .gmail, .facebook{
     width: 48%;
+    margin-bottom: 10px;
 }
 .icon {
     width: 25px;

@@ -4,7 +4,7 @@
 
 .top-navbar {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   justify-content: space-between;
   align-items: center;
   margin-bottom: -10px;
@@ -36,7 +36,7 @@ body {
 }
 
 .logo {
-  width: 110px;
+  width: 80px;
   margin: 10px;
 }
 
@@ -60,6 +60,7 @@ body {
   margin-bottom: -5px;
   justify-content: space-evenly;
   align-items: center;
+  height: 20px;
 }
 
 .search-container {
@@ -69,7 +70,7 @@ body {
 }
 
 .search-navbar {
-  margin-right: 100px;
+  /* margin-right: 100px; */
   display: block;
 }
 
@@ -96,7 +97,7 @@ body {
   padding: 0;
 }
 
-.btn-logo a img{
+.btn-logo a img {
   width: 90px;
   height: 110px;
   margin-top: -75px;
@@ -123,8 +124,8 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 0.065rem;
-    font-size: 20px;
-    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 18px;
+    
     display: inline-block;
     padding: 10px 0px;
     padding-right: 10px;
@@ -157,8 +158,8 @@ body {
     height: auto;
   }
 
-  .logo{
-    width: 150px;
+  .logo {
+    width: 110px;
   }
 }
 
@@ -179,7 +180,8 @@ body {
     height: 45px;
   }
 
-  .top-navbar, .menu {
+  .top-navbar,
+  .menu {
     max-width: 1300px;
     margin: auto;
   }
@@ -197,7 +199,7 @@ body {
     width: 560px;
   }
 
-  .menu li{
+  .menu li {
     margin-top: -5px;
   }
 }
@@ -239,19 +241,19 @@ body {
 }
 
 .usuario {
-  position: relative; left: 230px
+  /* position: relative; */
+  left: 230px
 }
 
 .logo {
-  position: relative;
+  /* position: relative; */
   right: 200px;
 }
 
 .menu-opciones a:hover {
-   border-bottom: 1px solid aqua;
+  border-bottom: 1px solid aqua;
 }
 
 .usuario a:hover {
   border-bottom: 1px solid aqua;
 }
-

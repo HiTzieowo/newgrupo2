@@ -58,6 +58,10 @@
 
 
 @media (min-width: 680px) {
+  .top-navbar{
+    height: 80px;
+  }
+
   .carousel-wrapper{
     margin-top: 220px;
   }

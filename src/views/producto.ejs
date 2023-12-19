@@ -28,21 +28,21 @@
         <div class="carrusel-todo">
           <div class="carrusel">
             <ul class="carrusel-fotos">
-              <li class="" id="foto1"><img src="/img/productos/<%= product.image %>" alt=""></li>
-              <li id="foto2"><img src="/img/productos/<%= product.image %>" alt=""></li>
-              <li id="foto3"><img src="/img/productos/<%= product.image %>" alt=""></li>
-              <li id="foto4"><img src="/img/productos/<%= product.image %>" alt=""></li>
-              <li id="foto5"><img src="/img/productos/<%= product.image %>" alt=""></li>
+              <li class="" id="foto1"><img src="/img/productos/<%= product.cover %>" alt=""></li>
+              <li id="foto2"><img src="/img/productos/<%= product.cover %>" alt=""></li>
+              <li id="foto3"><img src="/img/productos/<%= product.cover %>" alt=""></li>
+              <li id="foto4"><img src="/img/productos/<%= product.cover %>" alt=""></li>
+              <li id="foto5"><img src="/img/productos/<%= product.cover %>" alt=""></li>
 
             </ul>
           </div>
 
           <ul class="carrusel-menu">
-            <li><a href="#foto1"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
-            <li><a href="#foto2"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
-            <li><a href="#foto3"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
-            <li><a href="#foto4"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
-            <li><a href="#foto5"><img src="/img/productos/<%= product.image %>" alt=""></a></li>
+            <li><a href="#foto1"><img src="/img/productos/<%= product.cover %>" alt=""></a></li>
+            <li><a href="#foto2"><img src="/img/productos/<%= product.cover %>" alt=""></a></li>
+            <li><a href="#foto3"><img src="/img/productos/<%= product.cover %>" alt=""></a></li>
+            <li><a href="#foto4"><img src="/img/productos/<%= product.cover %>" alt=""></a></li>
+            <li><a href="#foto5"><img src="/img/productos/<%= product.cover %>" alt=""></a></li>
 
           </ul>
 
@@ -63,10 +63,10 @@
             </div>
             <div class="editar-eliminar">
               <a href="/editar/<%= product.id %>" class="btn btn-an ed">Editar</a>
-              <form action="/eliminar/<%= product.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="btn btn-an">Eliminar</button>
-                <!-- <a href="/biblioteca" class="btn btn-5">Eliminar juego</a> -->
-              </form>
+              <!-- <form action="/eliminar/<%= product.id %>?_method=DELETE" method="POST"> -->
+                <!-- <button type="submit" class="btn btn-an">Eliminar</button> -->
+                <a href="/eliminar/<%= product.id %>" class="btn btn-an">Eliminar juego</a>
+              <!-- </form> -->
             </div>
           </div>
 

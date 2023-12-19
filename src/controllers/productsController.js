@@ -1,119 +1,66 @@
-// Requerimos path para poder enviar los archivos HTML
-const fs= require("fs")
-const path = require("path");
-/* const { READUNCOMMITTED } = require("sequelize/types/table-hints"); */
+const db = require("../database/models");
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-
-// Creamos el objeto literal con los métodos a exportar
 const productsController = {
-
-    index: (req, res) => {
-		// Do the magic
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render("biblioteca", {products: products});
-	},
-
-    // Manejo del pedido get con ruta
-    productoDetalle: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const product = products.find(product => {
-            return product.id == req.params.id
-        });
-        res.render("producto", {product})
+    'productoDetalle': (req, res) => {
+        let id = req.params.id      //guardamos el id por parametro
+        db.Productos.findByPk(id)   //usamos el id por parametro para usar en la base de datos
+        .then((product) => {
+            res.render("producto", {product: product})
+        })
     },
 
-    crear: (req, res) => {
-        // comunicarse con el modelo, conseguir información
+    'crear': (req, res) => {
         res.render("crear")
     },
-    procesoCrear: (req,res) => {
-        const data = req.body;
-        //leer archivo
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        //crear objeto literal
-        const newProduct = {
-            //ver el id del ultimo elemento del array y sumar 1
-            id: products[products.length - 1].id + 1,
-            name: data.name,
-            price: parseInt(data.price),
-            discount: parseInt(data.discount),
-            category: data.category,
-            history: data.history,
-            description: data.description,
-            image: req.file ? req.file.filename : "logo-tienda.png"
-        }
-        //agregar al archivo json
-        products.push(newProduct);
 
-        //reescribir el archivo json
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect("/biblioteca");
+    'procesoCrear': (req, res) => {
+        db.Productos.create({       //usamos el metodo create de sequelize para crear un nuevo producto
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            history: req.body.history,
+            description: req.body.description,
+            cover: req.file.filename
+        })
+        .then(() => {
+            res.redirect("/");
+        })
     },
 
-    eliminar: (req,res) => {
-        //leer archivo
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        //borrar
-        const filtrarProducto = products.filter(product => {
-            return product.id != req.params.id;
-        });
-
-        //reescribir archivo
-        fs.writeFileSync(productsFilePath, JSON.stringify(filtrarProducto, null, " "));
-
-        //redirigir
-        res.redirect("/biblioteca");
+    'editar': (req, res) => {
+        id = req.params.id;
+        db.Productos.findByPk(id)
+        .then((product) => {
+            res.render("editar", {productToEdit: product}); //enviamos los datos como espera el archivo ejs con los datos que tenemos en la bd
+        })
     },
 
-    editar: (req, res) => {
-        // comunicarse con el modelo, conseguir información
-         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const product = products.find(product => {
-            return product.id == req.params.id
-        });
-        
-        res.render("editar", {productToEdit : product});
-    },
-
-    procesoEditar: (req, res) => {
-        const data = req.body;
-        //leer archivo
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        //buscar id original
-        const oldProduct = products.find(product => {
-            return product.id == req.params.id
-        });
-
-        //crear objeto literal
-        const editedProduct = {
-            id: oldProduct.id,
-            name: data.name,
-            price: parseInt(data.price),
-            discount: parseInt(data.discount),
-            category: data.category,
-            history: data.history,
-            description: data.description,
-            image: req.file ? req.file.filename : oldProduct.image
-        }
-
-        //ver el indice
-        const index = products.findIndex(product => {
-            return product.id == req.params.id
+    'procesoEditar': (req, res) => {
+        db.Productos.update({       //usamos el metodo update de sequelize para editar o actualizar los datos
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            history: req.body.history,
+            description: req.body.description,
+            cover: req.file.filename
+        }, {    
+            where: {id: req.params.id} //importante agregar el where para editar el producto correcto, si no se agrega se va a actualizar todos los productos de la base de datos
         })
 
-        //modificar el archivo json donde corresponda
-        products[index] = editedProduct;
+        .then(() => {
+            res.redirect("/");
+        })
+    },
 
-        //reescribir el archivo json
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        
-        res.redirect("/biblioteca");
+    'eliminar': (req, res) => {
+        let productId= req.params.id;
+        db.Productos.destroy({
+            where: {id: productId}
+        })
+        .then(() => {
+            res.redirect("/")
+        })
     }
 }
 
-
-// Exportamos el objeto literal con los distintos métodos, que se usará en el enrutador por defecto
-module.exports = productsController;
+module.exports = productsController

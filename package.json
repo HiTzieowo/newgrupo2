@@ -1,10 +1,10 @@
 {
-  "name": "repaso_express",
+  "name": "trabajo_integrador",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",

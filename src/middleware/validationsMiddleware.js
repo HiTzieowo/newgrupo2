@@ -18,8 +18,10 @@ function validationMiddleware(req, res, next) {
             }
             return true
         })
+
     ]
 
+    next();
 }
 
 module.exports = validationMiddleware;
