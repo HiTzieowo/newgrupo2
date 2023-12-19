@@ -102,14 +102,12 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .logo-link {
-    
-  }
   .usuario {
     position: absolute;
     left: 100px;
   }
 }
 
-
-
+main{
+  padding-top: 3%;
+}
